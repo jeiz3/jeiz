@@ -190,28 +190,27 @@ ul li + li + li > a{
     flex-wrap: wrap;
 }
 
-.project img {
-    flex: 3;
-    height: auto;
-    width: clamp(300px, 80vw, 600px);
+img {
     display: block;
+    max-height: 337px;
+    max-width: 600px;
+
 }
 
 .right-col {
-    flex: 2;
+    flex: 1;
     flex-direction: column;
     text-align: justify;
 }
 
-.project-title {
-    margin: .6rem 0;
-}
-
+.project-title,
 .stack-used {
     margin: .6rem 0;
-    flex-grow: 1;
 }
 
+.description {
+    flex-grow: 1;
+}
 .project-controls {
     column-gap: 10px;
     flex-wrap: wrap;
@@ -221,4 +220,57 @@ ul li + li + li > a{
 #view-source-code {
     margin: 4px 0;
     max-height: 35px;
+}
+
+@media screen and (max-width: 767px) {
+    /* navlinks and social icons gets hidden*/
+    nav,
+    .socials {
+        display: none;
+    }
+
+    .header-content {
+        justify-content: center;
+    }
+    
+    /* hero and resume button gets centered */
+    h1 {
+        text-align: center;
+    }
+
+    .resume-button-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1023px) { 
+    /* project contents need to be centered for both mobile and tab*/
+    .right-col {
+        text-align: center;
+    }
+
+    .project img {
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        width: min(80vw, 600px);
+    }
+
+    .project-controls {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .right-col {
+        flex-basis: 360px;
+    }
+}
+
+/* this is to align the project title to topmost of image */
+@media screen and (min-width: 1024px) {
+    .project-title {
+        margin-top: -6px;
+    }
+    
 }
