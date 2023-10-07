@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Jeiz</title>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="horizontally-centered flex-container justify-space-between align-center header-content">
+            <h2 class="site-identity"><a href="#">Jeiz</a></h2>
+            <nav>
+                <ul class="flex-container justify-space-between align-center">
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#projects-section">Projects</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="flex-container justify-space-between">
+                <h1 class="heading">Hi! I'm Jaycee Calata, a web developer from the Philippines.</h1>
+                <div class="flex-container socials">
+                    <a href="#"><img src="assets/github-socials.webp" alt="github icon" class="social-icons"></a>
+                    <a href="#"><img src="assets/linkedin-socials.webp" alt="linkedin icon" class="social-icons"></a>
+                </div>
+            </div>
+            <div class="flex-container resume-button-container">
+                <a class="cta-buttons download-button" href="#">Download my resume</a>
+            </div>
+        </section>
+
+        <section id="about-section">
+            <h2 class="subheading centered-text">I specialize in front-end development, and below is my current tech stack.</h2>
+            <div class="flex-container stack-icon-row">
+                <img src="assets/wordpress-icon.webp" alt="wordpress icon" class="stack-icons">
+                <img src="assets/html-icon.webp" alt="html icon" class="stack-icons">
+                <img src="assets/css-icon.webp" alt="css icon" class="stack-icons">
+                <img src="assets/js-icon.webp" alt="javascript icon" class="stack-icons">
+                <img src="assets/git-icon.webp" alt="git icon" class="stack-icons">  
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <h2 class="subheading centered-text">Projects I have worked on are the following:</h2>
+            <div class="flex-container justify-space-between project">
+                <img src="assets/zhop-mockup.png" alt="ecommerce website mockup">
+                <div class="flex right-col">
+                    <h3 class="project-title">Lorem, ipsum dolor.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolores molestiae optio maiores placeat tempore harum fugiat non fugit accusamus velit amet omnis ipsum dicta sit quibusdam alias. Odio inventore explicabo accusantium. Ipsam autem porro voluptate aliquam laudantium quaerat ad deserunt, natus nemo ullam asperiores ipsa atque fugiat nulla quas!
+                    </p>
+                    <p class="stack-used">*made with:<span class="special-text"> HTML, CSS, &amp; JS</span></p>
+                    <div class="flex-container project-controls">
+                        <a class="cta-buttons" id="view-project" href="#">View live project</a>
+                        <a class="cta-buttons" id="view-source-code" href="#">Source code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
