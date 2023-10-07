@@ -1,0 +1,224 @@
+:root {
+    --default-font: 'Red Hat Display', sans-serif;
+    --special-font: 'Prata', serif;
+
+    --font-color: #81a1af;
+    --font-color-heading: #e5e7eb;
+    --font-color-special: #F18F01;
+    --font-size-default: 16px;
+
+    --background-color: #080c16;
+    --accent-color: #FFFFFF;
+
+    --button-color: #99C24D;
+    --button-text-color: black;
+
+    --max-width: 1200px;
+}
+
+html {
+    font-size: var(--font-size-default);
+    font-family: var(--default-font);
+    color: var(--font-color);
+    background-color: var(--background-color);
+}
+
+/* PRESET STYLES */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.special-text,
+::placeholder {
+    color: var(--font-color-special);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.horizontally-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--font-color-heading);
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+}
+
+section {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 24px 12px;
+}
+
+/* FLEX CLASSES */
+.flex-container {
+    display: flex;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* HEADER & NAVBAR */
+header {
+    background-color: var(--background-color);
+}
+
+
+.header-content {
+    padding: 0 12px;
+    max-width: var(--max-width);
+    height: 64px;
+}
+
+nav ul {
+    gap: 1rem;
+}
+
+nav li {
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.site-identity {
+    font-family: var(--special-font);
+    font-size: 1.2em;
+    text-transform: capitalize;
+    margin-bottom: -4px;
+}
+
+nav a,
+.site-identity a {
+    padding: 8px 12px;
+    color: var(--font-color-heading);
+}
+
+/* The 'contact' link edge should be perpendicular to the last icon of socials by design */
+ul li + li + li > a{
+    padding-right: 0;
+}
+/* HERO SECTION */
+.heading {
+    flex: 3;
+}
+
+.socials {
+    flex: 1;
+    justify-content: end;
+    padding-top: 16px;
+}
+
+.social-icons {
+    width: auto;
+    height: auto;
+}
+
+.socials :last-child {
+    padding-left: 12px;
+}
+
+.cta-buttons {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-family: var(--default-font);
+    font-size: .9rem;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    padding: 8px 24px;
+}
+
+.resume-button-container {
+    margin: 32px 0;
+}
+
+.subheading {
+    font-weight: 400;
+    margin: 2rem 0;
+}
+
+.stack-icon-row { 
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 24px 0;
+    gap: 1rem;
+}
+
+.stack-icons {
+    max-height: auto;
+    width: clamp(40px, 8vw, 60px);
+}
+
+/* PROJECT/S SECTION */
+.project {
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.project img {
+    flex: 3;
+    height: auto;
+    width: clamp(300px, 80vw, 600px);
+    display: block;
+}
+
+.right-col {
+    flex: 2;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.project-title {
+    margin: .6rem 0;
+}
+
+.stack-used {
+    margin: .6rem 0;
+    flex-grow: 1;
+}
+
+.project-controls {
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+#view-project,
+#view-source-code {
+    margin: 4px 0;
+    max-height: 35px;
+}
