@@ -52,10 +52,9 @@
             <h2 class="subheading centered-text">Projects I have worked on are the following:</h2>
             <div class="flex-container justify-space-between project">
                 <img src="assets/zhop-mockup.png" alt="ecommerce website mockup">
-                <div class="flex-container right-col">
+                <div class="flex-container flex-column justified-text right-col">
                     <h3 class="project-title">Lorem, ipsum dolor.</h3>
-                    <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt, dolores molestiae optio maiores placeat tempore harum fugiat non fugit accusamus velit amet omnis ipsum dicta sit quibusdam alias. Odio inventore explicabo accusantium. Ipsam autem porro voluptate aliquam laudantium quaerat ad deserunt, natus nemo ullam asperiores ipsa atque fugiat nulla quas!
-                    </p>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium repellendus est soluta rerum ut iusto a numquam, ducimus minus atque odit non officiis dolores debitis architecto quasi eum velit nobis voluptate laudantium laborum. Et enim rerum unde illo ullam. Assumenda, fugiat? Velit similique autem unde fuga molestias corrupti quidem, quis architecto ad molestiae, iste natus nisi asperiores vel quod eligendi error odio animi ducimus. Veniam tempora dolor neque odit ad eius cumque adipisci porro quasi fugiat enim, numquam ipsam.</p>
                     <p class="stack-used">*made with:<span class="special-text"> HTML, CSS, &amp; JS</span></p>
                     <div class="flex-container project-controls">
                         <a class="cta-buttons" id="view-project" href="#">View live project</a>
@@ -65,6 +64,22 @@
             </div>
         </section>
 
+        <section id="contact">
+            <h2 class="subheading centered-text">Got your interest? Get in touch!</h2>
+            <form action="#" method="post">
+                <div class="flex-container flex-wrap horizontally-centered contact-form">
+                    <!-- <label for="name">Name</label> -->
+                    <input type="text" name="name" id="name" class="half-length-field" placeholder="Name" required>
+                    <!-- <label for="email">Email</label> -->
+                    <input type="email" name="email" id="email" class="half-length-field" placeholder="Email" required>
+                    <!-- <label for="subject">Subject</label> -->
+                    <input type="text" name="subject" id="subject" class="full-length-field" placeholder="Subject" required>
+                    <!-- <label for="message">Message</label> -->
+                    <textarea name="message" id="message" class="full-length-field" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <input type="submit" id="submit" class="horizontally-centered" value="Submit">
+                </div>
+            </form>
+        </section>
     </main>
 </body>
 </html>
