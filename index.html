@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Prata&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>Jeiz</title>
 </head>
-<body>
+<body class="flex-container flex-column">
     <header class="sticky-header">
         <div class="horizontally-centered flex-container justify-space-between align-center header-content">
-            <h2 class="site-identity"><a href="#">Jeiz</a></h2>
+            <h2 class="site-identity capitalize"><a href="#">Jeiz</a></h2>
             <nav>
-                <ul class="flex-container justify-space-between align-center">
+                <ul class="flex-container justify-space-between align-center gap-16">
                     <li><a href="#about-section">About</a></li>
                     <li><a href="#projects-section">Projects</a></li>
                     <li><a href="#contact-section">Contact</a></li>
@@ -39,7 +39,7 @@
 
         <section id="about-section">
             <h2 class="subheading centered-text">I specialize in front-end development, and below is my current tech stack.</h2>
-            <div class="flex-container stack-icon-row">
+            <div class="flex-container stack-icon-row gap-16">
                 <img src="assets/wordpress-icon.webp" alt="wordpress icon" class="stack-icons">
                 <img src="assets/html-icon.webp" alt="html icon" class="stack-icons">
                 <img src="assets/css-icon.webp" alt="css icon" class="stack-icons">
@@ -50,13 +50,13 @@
 
         <section id="projects-section">
             <h2 class="subheading centered-text">Projects I have worked on are the following:</h2>
-            <div class="flex-container justify-space-between project">
+            <div class="flex-container justify-space-between flex-wrap project">
                 <img src="assets/zhop-mockup.png" alt="ecommerce website mockup">
                 <div class="flex-container flex-column justified-text right-col">
                     <h3 class="project-title">Lorem, ipsum dolor.</h3>
-                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium repellendus est soluta rerum ut iusto a numquam, ducimus minus atque odit non officiis dolores debitis architecto quasi eum velit nobis voluptate laudantium laborum. Et enim rerum unde illo ullam. Assumenda, fugiat? Velit similique autem unde fuga molestias corrupti quidem, quis architecto ad molestiae, iste natus nisi asperiores vel quod eligendi error odio animi ducimus. Veniam tempora dolor neque odit ad eius cumque adipisci porro quasi fugiat enim, numquam ipsam.</p>
+                    <p class="project-description justified-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium repellendus est soluta rerum ut iusto a numquam, ducimus minus atque odit non officiis dolores debitis architecto quasi eum velit nobis voluptate laudantium laborum. Et enim rerum unde illo ullam. Assumenda, fugiat? Velit similique autem unde fuga molestias corrupti quidem, quis architecto ad molestiae, iste natus nisi asperiores vel quod eligendi error odio animi ducimus.</p>
                     <p class="stack-used">*made with:<span class="special-text"> HTML, CSS, &amp; JS</span></p>
-                    <div class="flex-container project-controls">
+                    <div class="flex-container flex-wrap project-controls">
                         <a class="cta-buttons" id="view-project" href="#">View live project</a>
                         <a class="cta-buttons" id="view-source-code" href="#">Source code</a>
                     </div>
@@ -64,22 +64,20 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact-section">
             <h2 class="subheading centered-text">Got your interest? Get in touch!</h2>
             <form action="#" method="post">
-                <div class="flex-container flex-wrap horizontally-centered contact-form">
-                    <!-- <label for="name">Name</label> -->
+                <div class="flex-container flex-wrap horizontally-centered contact-form gap-16">
                     <input type="text" name="name" id="name" class="half-length-field" placeholder="Name" required>
-                    <!-- <label for="email">Email</label> -->
                     <input type="email" name="email" id="email" class="half-length-field" placeholder="Email" required>
-                    <!-- <label for="subject">Subject</label> -->
                     <input type="text" name="subject" id="subject" class="full-length-field" placeholder="Subject" required>
-                    <!-- <label for="message">Message</label> -->
                     <textarea name="message" id="message" class="full-length-field" cols="30" rows="10" placeholder="Message" required></textarea>
-                    <input type="submit" id="submit" class="horizontally-centered" value="Submit">
+                    <input type="submit" id="submit" class="horizontally-centered transform-uppercase" value="Submit">
                 </div>
             </form>
         </section>
     </main>
+
+    <footer class="centered-text">Dummy Portfolio | &copy; Jaycee Calata - 2023</footer>
 </body>
 </html>

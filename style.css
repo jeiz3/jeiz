@@ -1,3 +1,9 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
     --default-font: 'Red Hat Display', sans-serif;
     --special-font: 'Prata', serif;
@@ -26,38 +32,28 @@ html {
     background-color: var(--background-color);
 }
 
-/* PRESET STYLES */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body {
+    min-height: 100vh;
 }
 
-.special-text {
-    color: var(--font-color-special);
+main {
+    flex-grow: 1;
 }
 
-.centered-text {
-    text-align: center;
-}
-
-.justified-text {
-    text-align: justify;
-}
-
-.horizontally-centered {
-    margin-left: auto;
-    margin-right: auto;
+section {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 24px;
 }
 
 a {
     text-decoration: none;
-    color: var(--font-color);
+    color: var(--font-color-default);
 }
 
 h1 {
     font-size: clamp(2rem, 10vw, 4rem);
-    letter-spacing: 3px;
+    letter-spacing: .25rem;
 }
 
 h2 {
@@ -77,10 +73,40 @@ p {
     top: 0;
 }
 
-section {
-    margin: 0 auto;
-    max-width: var(--max-width);
-    padding: 24px 12px;
+.cta-buttons {
+    display: inline-block;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-family: var(--default-font);
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    border-radius: var(--border-radius-default);
+    padding: 8px 24px;
+}
+
+.special-text {
+    color: var(--font-color-special);
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.justified-text {
+    text-align: justify;
+}
+
+.horizontally-centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transform-uppercase {
+    text-transform: uppercase;
+}
+
+.transform-capitalize {
+    text-transform: capitalize;
 }
 
 /* FLEX CLASSES */
@@ -104,6 +130,10 @@ section {
     flex-wrap: wrap;
 }
 
+.gap-16 {
+    gap: 16px;
+}
+
 /* HEADER & NAVBAR */
 header {
     background-color: var(--background-color);
@@ -115,20 +145,15 @@ header {
     height: 64px;
 }
 
-nav ul {
-    gap: 1rem;
-}
-
 nav li {
     list-style: none;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: .25rem;
 }
 
 .site-identity {
     font-family: var(--special-font);
-    font-size: 1.2em;
-    text-transform: capitalize;
+    font-size: 1.2rem;
     margin-bottom: -4px;
 }
 
@@ -139,9 +164,10 @@ nav a,
 }
 
 /* The 'contact' link edge should be perpendicular to the last icon of socials by design */
-ul li + li + li > a{
+ul li + li + li > a {
     padding-right: 0;
 }
+
 /* HERO SECTION */
 .heading {
     flex: 3;
@@ -162,30 +188,20 @@ ul li + li + li > a{
     padding-left: 12px;
 }
 
-.cta-buttons {
-    display: inline-block;
-    background-color: var(--button-color);
-    color: var(--button-text-color);
-    font-family: var(--default-font);
-    font-size: .9rem;
-    letter-spacing: 1px;
-    border-radius: var(--border-radius-default);
-    padding: 8px 24px;
-}
 
-.resume-button-container {
+.resume-button-container,
+/* ABOUT SECTION */
+.subheading {
     margin: 32px 0;
 }
 
 .subheading {
     font-weight: 400;
-    margin: 2rem 0;
 }
 
 .stack-icon-row { 
     justify-content: center;
     margin: 24px 0;
-    gap: 1rem;
 }
 
 .stack-icons {
@@ -196,14 +212,12 @@ ul li + li + li > a{
 /* PROJECT/S SECTION */
 .project {
     column-gap: 40px;
-    flex-wrap: wrap;
 }
 
 img {
     display: block;
     max-height: 337px;
     max-width: 600px;
-
 }
 
 .right-col {
@@ -212,15 +226,15 @@ img {
 
 .project-title,
 .stack-used {
-    margin: .6rem 0;
+    margin: 8px 0;
 }
 
 .project-description {
     flex-grow: 1;
 }
+
 .project-controls {
     column-gap: 10px;
-    flex-wrap: wrap;
 }
 
 #view-project,
@@ -228,10 +242,10 @@ img {
     margin: 4px 0;
     max-height: 35px;
 }
-/* FORM */
+
+/* CONTACT SECTION */
 .contact-form {
     max-width: var(--form-max-width);
-    gap: 16px;
 }
 
 .half-length-field {
@@ -245,7 +259,6 @@ img {
 input {
     height: 35px;
     padding: 0 16px;
-    
 }
 
 textarea {
@@ -261,13 +274,16 @@ textarea {
 
 #submit {
     background-color: var(--button-color);
-    /* text-align: center; */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .12rem;
 }
 
 @media screen and (max-width: 767px) {
     /* navlinks and social icons gets hidden*/
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
     nav,
     .socials {
         display: none;
